@@ -56,11 +56,8 @@
 
         var start = jQuery.inArray(settings.trailhead,titles) + 1;
 
-        log(titles);
-        log(start);
-
 				for(var i=start; i < titles.length;i++) {
-          log("Mile marker: "+i);
+          log("Mile marker: "+i+" "+titles[i]);
 
 					var title = titles[i];
           if(title.length != 0) {
@@ -84,7 +81,7 @@
 
         log("Treasure map found!");
 
-        return landmarks.slice(1);
+        return landmarks.slice(2);
 			},
 
       // Utility Functions 
