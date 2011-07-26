@@ -1721,7 +1721,7 @@
 			 * @return {true}
 			 */
 			History.pushState = function(data,title,url,queue){
-				//History.debug('History.pushState: called', arguments);
+				History.debug('History.pushState: called', arguments);
 
 				// Check the State
 				if ( History.getHashByUrl(url) && History.emulated.pushState ) {
