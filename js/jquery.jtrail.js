@@ -66,7 +66,11 @@
             do {
               var find_next = jQuery.inArray(title,titles.slice(i+1));
               if(find_next > -1 && title == titles[find_next]) {
-                i += find_next + 1;
+                if(title == titles[find_next]) {
+                  i += find_next + 1;
+                } else {
+                  break; 
+                }
               }
             } while(find_next > -1);
           }
@@ -74,7 +78,7 @@
 
         log("Treasure map found!");
 
-        return landmarks.slice(2);
+        return landmarks.slice(1);
 			},
 
       // Utility Functions 
