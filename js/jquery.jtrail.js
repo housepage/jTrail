@@ -56,7 +56,9 @@
         log("Assembling deduplicated array of visited sites");
         var landmarks = new Array(); 
 
-				for(var i=0;i < titles.length;i++) {
+        var start = jQuery.inArray(title,titles) + 1;
+
+				for(var i=start; i < titles.length;i++) {
           log("Mile marker: "+i);
 
 					var title = titles[i];
