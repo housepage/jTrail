@@ -21,7 +21,7 @@
           var State = History.getState(); // Note: We are using History.getState() instead of event.state
           alert("Hello?");
 
-          $("#trail").jTrail({start:State.data.start,end:State.data.end});
+          //$("#trail").jTrail({start:State.data.start,end:State.data.end});
         });
 
         History.replaceState({start: 'Seattle',end: 'Mount Rainier',current: 'Seattle'},'Seattle',"/jTrail/demo/index.html");
