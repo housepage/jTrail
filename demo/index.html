@@ -9,8 +9,10 @@
     <title>jTrail</title>
 
     <script type="text/javascript">
-      var history = window.History;
-      history.replaceState({start: 'Seattle',end: 'Mount Rainier',current: 'Seattle'},'Seattle',".");
+      (function(window,undefined) {
+        var history = window.History;
+        history.replaceState({start: 'Seattle',end: 'Mount Rainier',current: 'Seattle'},'Seattle',".");
+      });
     </script>
   </head>
   <body>
