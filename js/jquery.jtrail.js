@@ -47,7 +47,7 @@
         }
 
         var titles = new Array();
-				for(var i=1;i < states.length;i++) {
+				for(var i=0;i < states.length;i++) {
           titles.push(states[i][settings.data_field]);
         }
 
