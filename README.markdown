@@ -15,7 +15,7 @@ Requirements
 Demo
 ====
 
-(http://housepage.github.com/jTrail/demo)
+http://housepage.github.com/jTrail/demo
 
 License
 =======
