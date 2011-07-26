@@ -1,11 +1,17 @@
+body {
+  background: #2C2421;
+  margin: 50px;
+}
+
 .landmark {
+  font-family: Georgia, Times, Serif;
   padding: 10px;
   border-width: 2px;
   border-style: solid;
   border-color: #B46A47;
   color: #E4876A;
   height: 50px;
-  max-width: 100px;
+  max-width: 95px;
   word-wrap: break-word;
 }
 
@@ -17,14 +23,14 @@
 .landmark-trailhead {
   border-style: double;
   border-width: 6px;
-  max-width: 120px;
+  max-width: 110px;
   height: 60px;
 }
 
 .landmark-peak {
   border-style: double;
   border-width: 6px;
-  max-width: 120px;
+  max-width: 110px;
   height: 60px;
 }
 

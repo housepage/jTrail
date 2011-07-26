@@ -155,9 +155,9 @@
 		 * Logs the passed arguments if debug enabled
 		 */
 		History.debug = function(){
-			//if ( (History.options.debug||false) ) {
+			if ( (History.options.debug||false) ) {
 				History.log.apply(History,arguments);
-			//}
+			}
 		};
 
 		/**
@@ -1721,7 +1721,7 @@
 			 * @return {true}
 			 */
 			History.pushState = function(data,title,url,queue){
-				History.debug('History.pushState: called', arguments);
+				//History.debug('History.pushState: called', arguments);
 
 				// Check the State
 				if ( History.getHashByUrl(url) && History.emulated.pushState ) {
@@ -1749,7 +1749,6 @@
 
 				// Check it
 				if ( History.isLastSavedState(newState) ) {
-          console.log("Herro?");
 					// Won't be a change
 					History.busy(false);
 				}

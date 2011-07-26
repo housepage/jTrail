@@ -70,8 +70,8 @@
 
         return landmarks.slice(1);
 			},
-      // Utility Functions
-     
+
+      // Utility Functions 
       createTrail = function(container) {
         var trail_table = $('<table>');
         trail_table.addClass(settings.trail_class);
