@@ -19,11 +19,12 @@
 
         $(function() {
           History.Adapter.bind(window,'statechange',function(){ // Note: We are using statechange instead of popstate
-          console.log("Huh?");
-          var State = History.getState(); // Note: We are using History.getState() instead of event.state
-          console.log("Huh?");
-          console.log("State change!"); 
-          /*$("#trail").jTrail({start:State.data.start,end:State.data.end});*/
+            console.log("Huh?");
+            var State = History.getState(); // Note: We are using History.getState() instead of event.state
+            console.log("Huh?");
+            console.log("State change!"); 
+            /*$("#trail").jTrail({start:State.data.start,end:State.data.end});*/
+          });
         });
         console.log("Huh?");
 
