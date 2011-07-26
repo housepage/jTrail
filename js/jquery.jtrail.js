@@ -42,6 +42,12 @@
 				var History = window.History; // Note: We are using a capital H instead of a lower h
         var states = History.savedStates;
 
+        if (states == 'undefined' || states.length <= 0) {
+          return new Array();
+        }
+
+        console.log(states);
+
         var titles = new Array();
 				for(var i=1;i < states.length;i++) {
           titles.push(states[i][settings.data_field]);
