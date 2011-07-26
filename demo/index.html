@@ -14,6 +14,7 @@
   <body>
     <div id="trail"></div>
     <script type="text/javascript">
+      console.log("Before");
       (function(window,undefined) {
         var History = window.History;
 
@@ -24,8 +25,9 @@
 
         History.replaceState({start: 'Seattle',end: 'Mount Rainier',current: 'Seattle'},'Seattle',"/jTrail/demo/index.html");
 
-
+        console.log("Herro?");
       })(window);
+      console.log("After");
     </script>
   </body>
 </html>
