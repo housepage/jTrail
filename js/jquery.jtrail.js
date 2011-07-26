@@ -46,8 +46,6 @@
           return new Array();
         }
 
-        console.log(states);
-
         var titles = new Array();
 				for(var i=1;i < states.length;i++) {
           titles.push(states[i][settings.data_field]);
@@ -56,7 +54,7 @@
         log("Assembling deduplicated array of visited sites");
         var landmarks = new Array(); 
 
-        var start = jQuery.inArray(title,titles) + 1;
+        var start = jQuery.inArray(settings.trailhead,titles) + 1;
 
 				for(var i=start; i < titles.length;i++) {
           log("Mile marker: "+i);
@@ -147,7 +145,7 @@
 
       log("Creating Trailhead");
       // Create Trailhead
-      var trailhead = createTrailhead(options.trailhead);
+      var trailhead = createTrailhead(settings.trailhead);
       trailhead.appendTo(trail);
       var i = 0;
     
