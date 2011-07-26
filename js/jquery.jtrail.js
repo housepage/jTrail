@@ -65,7 +65,8 @@
             
             do {
               var find_next = jQuery.inArray(title,titles.slice(i+1));
-              if(find_next > -1 && title == titles[find_next]) {
+              console.log("Find Next:"+find_next);
+              if(find_next > -1) {
                 if(title == titles[find_next]) {
                   i += find_next + 1;
                 } else {
