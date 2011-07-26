@@ -13,7 +13,7 @@
     <div id="trail"></div>
     <script type="text/javascript">
       (function(window,undefined) {
-       var History = window.History;
+        var History = window.History;
 
         History.Adapter.bind(window,'statechange',function(){ // Note: We are using statechange instead of popstate
           var State = History.getState(); // Note: We are using History.getState() instead of event.state
@@ -21,6 +21,8 @@
         });
 
         History.replaceState({start: 'Seattle',end: 'Mount Rainier',current: 'Seattle'},'Seattle',"/jTrail/demo/index.html");
+
+        console.log("Herro?");
       });
     </script>
   </body>
