@@ -10,25 +10,30 @@
 
     <title>jTrail</title>
 
+    <script type="text/javascript">
+      jQuery.ready(function() {
+        (function(window,undefined) {
+          var History = window.History;
+
+          History.Adapter.bind(window,'statechange',function(){ // Note: We are using statechange instead of popstate
+            var State = History.getState(); // Note: We are using History.getState() instead of event.state
+            console.log("State change!"); 
+            /*$("#trail").jTrail({start:State.data.start,end:State.data.end});*/
+          });
+
+          History.pushState({start: "Seattle",end: "Mount Rainier",current: "Seattle"},"Seattle","/jTrail/demo/index.html");
+        
+          console.log("Huh?");
+
+        })(window);
+        console.log("What?");
+      });
+    </script>
+
   </head>
   <body>
     <div id="trail"></div>
     <script type="text/javascript">
-      (function(window,undefined) {
-        var History = window.History;
-
-        History.Adapter.bind(window,'statechange',function(){ // Note: We are using statechange instead of popstate
-          var State = History.getState(); // Note: We are using History.getState() instead of event.state
-          console.log("State change!"); 
-          /*$("#trail").jTrail({start:State.data.start,end:State.data.end});*/
-        });
-
-        History.pushState({start: "Seattle",end: "Mount Rainier",current: "Seattle"},"Seattle","/jTrail/demo/index.html");
-      
-        console.log("Huh?");
-
-      })(window);
-      console.log("What?");
     </script>
   </body>
 </html>
