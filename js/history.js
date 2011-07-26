@@ -1728,8 +1728,6 @@
 					throw new Error('History.js does not support states with fragement-identifiers (hashes/anchors).');
 				}
 
-        History.debug("Here");
-
 				// Handle Queueing
 				if ( queue !== false && History.busy() ) {
 					// Wait + Push to Queue
@@ -1743,18 +1741,15 @@
 					return false;
 				}
 
-        History.debug("And here");
-
 				// Make Busy + Continue
 				History.busy(true);
 
 				// Create the newState
 				var newState = History.createStateObject(data,title,url);
 
-        console.log("Whoa");
-
 				// Check it
 				if ( History.isLastSavedState(newState) ) {
+          console.log("Herro?");
 					// Won't be a change
 					History.busy(false);
 				}
