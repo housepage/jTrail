@@ -1,0 +1,35 @@
+.landmark {
+  padding: 10px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #B46A47;
+  color: #E4876A;
+  height: 50px;
+  max-width: 100px;
+  word-wrap: break-word;
+}
+
+.landmark-unknown {
+  border-style: dashed;
+  
+}
+
+.landmark-trailhead {
+  border-style: double;
+  border-width: 6px;
+  max-width: 120px;
+  height: 60px;
+}
+
+.landmark-peak {
+  border-style: double;
+  border-width: 6px;
+  max-width: 120px;
+  height: 60px;
+}
+
+table.trail {
+  table-layout: fixed;
+  width: 100%;
+}
+
