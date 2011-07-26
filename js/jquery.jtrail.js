@@ -68,7 +68,7 @@
 
         log("Treasure map found!");
 
-        return landmarks.slice(1);
+        return landmarks.slice(2);
 			},
 
       // Utility Functions 
