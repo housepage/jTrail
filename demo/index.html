@@ -21,22 +21,25 @@
 
         History.Adapter.bind(window,'statechange',function(){ // Note: We are using statechange instead of popstate
           var State = History.getState(); // Note: We are using History.getState() instead of event.state
-          console.log(History.savedStates);
-          $("#trail").jTrail({trailhead:State.data.start,peak:State.data.end});
+          console.log(State);
+          if( typeof State.data.current != 'undefined') {
+            console.log(History.savedStates);
+            $("#trail").jTrail({trailhead:State.data.start,peak:State.data.end});
 
 
-          var list = $('<ol>');
-          $("#links").html('');
-          list.appendTo($("#links"));
+            var list = $('<ol>');
+            $("#links").html('');
+            list.appendTo($("#links"));
 
-          var i = 0;
-          for(i = 0; i < State.data.links.length; i++) {
-            var tmp = $('<li>');
-            tmp.text(State.data.links[i]);
-            tmp.click({i:i,title:State.data.links[i],links:State.data.links,history:History},function(eventobj) {
-              History.pushState({start: "Seattle",end: "Mount Rainier",current: eventobj.data.title,links:eventobj.data.links.slice(0,eventobj.data.i).concat(eventobj.data.links.slice(eventobj.data.i+1))},eventobj.data.title,"/jTrail/demo/"+eventobj.data.title);
-            });
-            tmp.appendTo(list);
+            var i = 0;
+            for(i = 0; i < State.data.links.length; i++) {
+              var tmp = $('<li>');
+              tmp.text(State.data.links[i]);
+              tmp.click({i:i,title:State.data.links[i],links:State.data.links,history:History},function(eventobj) {
+                History.pushState({start: "Seattle",end: "Mount Rainier",current: eventobj.data.title,links:eventobj.data.links.slice(0,eventobj.data.i).concat(eventobj.data.links.slice(eventobj.data.i+1))},eventobj.data.title,"/jTrail/demo/"+eventobj.data.title);
+              });
+              tmp.appendTo(list);
+            }
           }
         });
 
