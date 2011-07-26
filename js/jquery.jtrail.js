@@ -57,7 +57,7 @@
         var start = jQuery.inArray(settings.trailhead,titles) + 1;
 
 				for(var i=start; i < titles.length;i++) {
-          log("Mile marker: "+i+" "+titles[i]);
+          log("Mile marker: "+i+" "+titles.length);
 
 					var title = titles[i];
           if(title.length != 0) {
