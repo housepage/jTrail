@@ -155,9 +155,9 @@
 		 * Logs the passed arguments if debug enabled
 		 */
 		History.debug = function(){
-			if ( (History.options.debug||false) ) {
+			//if ( (History.options.debug||false) ) {
 				History.log.apply(History,arguments);
-			}
+			//}
 		};
 
 		/**
