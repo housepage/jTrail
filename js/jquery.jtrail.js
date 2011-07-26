@@ -139,6 +139,9 @@
 		  	
       var landmarks = getLandmarks();
 
+      log("Landmarks");
+      log(landmarks);
+
       log("Got Landmarks");
 			
       log("Creating Trail");
