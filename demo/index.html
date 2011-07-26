@@ -19,15 +19,12 @@
             $ = window.jQuery;
         console.log($);
 
-        $(function() {
-          History.Adapter.bind(window,'statechange',function(){ // Note: We are using statechange instead of popstate
-            var State = History.getState(); // Note: We are using History.getState() instead of event.state
-            $("#trail").jTrail({start:State.data.start,end:State.data.end});
-          });
+        History.Adapter.bind(window,'statechange',function(){ // Note: We are using statechange instead of popstate
+          var State = History.getState(); // Note: We are using History.getState() instead of event.state
+          console.log(State);
+          $("#trail").jTrail({start:State.data.start,end:State.data.end});
         });
 
-        console.log("Hrrm");
-        console.log(History);
         History.pushState({start: "Seattle",end: "Mount Rainier",current: "Seattle"},"Seattle","/jTrail/demo/Seattle");
 
       })(window);
