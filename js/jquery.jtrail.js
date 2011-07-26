@@ -50,8 +50,6 @@
         log("Assembling deduplicated array of visited sites");
         var landmarks = new Array(); 
 
-        log(states);
-
 				for(var i=0;i < titles.length;i++) {
           log("Mile marker: "+i);
 
