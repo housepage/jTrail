@@ -12,10 +12,8 @@
 
     <script type="text/javascript">
       (function(window,undefined) {
-        console.log("Huh?");
         var History = window.History,
             $ = window.jQuery;
-        console.log("Huh?");
 
         $(function() {
           History.Adapter.bind(window,'statechange',function(){ // Note: We are using statechange instead of popstate
@@ -26,14 +24,10 @@
             /*$("#trail").jTrail({start:State.data.start,end:State.data.end});*/
           });
         });
-        console.log("Huh?");
 
         History.pushState({start: "Seattle",end: "Mount Rainier",current: "Seattle"},"Seattle","/jTrail/demo/index.html");
-      
-        console.log("Huh?");
 
       })(window);
-      console.log("What?");
     </script>
 
   </head>
