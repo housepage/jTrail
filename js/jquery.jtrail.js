@@ -58,6 +58,8 @@
 
 				for(var i=start; i < titles.length;i++) {
           log("Mile marker: "+i+" "+titles.length);
+          log(titles);
+          
 
 					var title = titles[i];
           if(title.length != 0) {
