@@ -67,15 +67,18 @@
 
 					var title = titles[i];
           if(title.length != 0) {
+            log("Title: "+title);
             landmarks.push(title);
            
             var find_next = i;
 
             do {
               var search = jQuery.inArray(title,titles.slice(find_next+1));
+
               if(search < 0) {
                 break;
               }
+
               find_next = search + find_next + 1;
 
               log("Find Next:"+find_next+" "+titles.slice(find_next+1));
