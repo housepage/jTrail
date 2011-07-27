@@ -79,7 +79,7 @@
                 break;
               }
 
-              find_next = search + find_next + 1;
+              find_next = search + find_next;
 
               log("Find Next:"+find_next+" "+titles.slice(find_next+1));
 
