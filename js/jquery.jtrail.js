@@ -73,7 +73,7 @@
 
             do {
               log("Find Next:"+find_next+" "+titles.slice(find_next+1));
-              find_next = jQuery.inArray(title,titles.slice(find_next+1));
+              find_next = jQuery.inArray(title,titles.slice(find_next+1)) + find_next;
 
               if(find_next > -1) {
                 if(title == titles[find_next]) {
