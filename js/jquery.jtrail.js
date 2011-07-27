@@ -91,6 +91,7 @@
               }
 
             } while(find_next > -1);
+            log("Another loop");
           }
 				}
 
