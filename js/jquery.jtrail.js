@@ -72,7 +72,12 @@
             var find_next = i;
 
             do {
-              find_next = jQuery.inArray(title,titles.slice(find_next+1)) + find_next;
+              var search = jQuery.inArray(title,titles.slice(find_next+1));
+              if(search < 0) {
+                break;
+              }
+              find_next = search + find_next + 1;
+
               log("Find Next:"+find_next+" "+titles.slice(find_next+1));
 
               if(find_next > -1) {
