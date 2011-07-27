@@ -54,7 +54,11 @@
         log("Assembling deduplicated array of visited sites");
         var landmarks = new Array(); 
 
-        var start = jQuery.inArray(settings.trailhead,titles) + 1;
+        var start = jQuery.inArray(settings.trailhead,titles);
+
+        if(start == -1) {
+          start = 0;
+        }
 
 				for(var i=start; i < titles.length;i++) {
           log("Mile marker: "+i+" "+titles.length);
@@ -83,7 +87,7 @@
 
         log("Treasure map found!");
 
-        return landmarks.slice(1);
+        return landmarks;
 			},
 
       // Utility Functions 
