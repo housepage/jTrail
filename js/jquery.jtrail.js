@@ -81,12 +81,12 @@
                 break;
               }
 
-              find_next = search + find_next + 1;
+              find_next = search + find_next + start;
 
               log(["Find Next",find_next,titles[find_next]]);
 
               if(title == titles[find_next]) {
-                i = find_next + 1;
+                i = find_next;
                 log("Found! Cutting out loop.");
               }
 
