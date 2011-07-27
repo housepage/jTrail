@@ -78,7 +78,8 @@
                 if(title == titles[find_next]) {
                   i += find_next + 1;
                 } else {
-                  i += find_next;
+                  console.log(find_next);
+                  break; 
                 }
               }
             } while(find_next > -1);
