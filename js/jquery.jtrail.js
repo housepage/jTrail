@@ -78,7 +78,8 @@
                 if(title == titles[find_next]) {
                   i += find_next + 1;
                 } else {
-
+                  log("Herro?");
+                  break;
                 }
               }
             } while(find_next > -1);
