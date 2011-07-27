@@ -78,8 +78,7 @@
                 if(title == titles[find_next]) {
                   i += find_next + 1;
                 } else {
-                  log("Herro?");
-                  break;
+                  i += find_next;
                 }
               }
             } while(find_next > -1);
@@ -88,7 +87,7 @@
 
         log("Treasure map found!");
 
-        return landmarks;
+        return landmarks.slice(1);
 			},
 
       // Utility Functions 
