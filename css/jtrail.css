@@ -3,6 +3,10 @@ body {
   margin: 50px;
 }
 
+#links {
+  color: #E4876A;
+}
+
 .landmark {
   font-family: Georgia, Times, Serif;
   padding: 10px;
