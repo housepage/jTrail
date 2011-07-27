@@ -85,12 +85,11 @@
 
               log(["Find Next",find_next,titles[find_next]]);
 
-              if(find_next > -1) {
-                if(title == titles[find_next]) {
-                  i = find_next + 1;
-                  log("Found! Cutting out loop.");
-                }
+              if(title == titles[find_next]) {
+                i = find_next + 1;
+                log("Found! Cutting out loop.");
               }
+
             } while(find_next > -1);
           }
 				}
