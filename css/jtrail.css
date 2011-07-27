@@ -7,6 +7,10 @@ body {
   color: #E4876A;
 }
 
+#links:hover {
+  cursor: pointer;
+}
+
 .landmark {
   font-family: Georgia, Times, Serif;
   padding: 10px;
