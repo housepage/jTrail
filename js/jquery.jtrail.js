@@ -85,7 +85,7 @@
 
               if(find_next > -1) {
                 if(title == titles[find_next]) {
-                  i += find_next + 1;
+                  i += find_next;
                 } else {
                   console.log(find_next);
                   console.log(titles[find_next]);
