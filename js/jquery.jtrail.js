@@ -80,6 +80,7 @@
                   i += find_next + 1;
                 } else {
                   console.log(find_next);
+                  console.log(titles[find_next]);
                   break; 
                 }
               }
