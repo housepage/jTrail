@@ -79,7 +79,7 @@
                 break;
               }
 
-              find_next = search + find_next;
+              find_next = search + find_next + 1;
 
 
               if(find_next > -1) {
