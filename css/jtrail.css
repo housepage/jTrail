@@ -7,7 +7,7 @@ body {
   color: #E4876A;
 }
 
-.li:hover {
+li:hover {
   cursor: pointer;
 }
 
