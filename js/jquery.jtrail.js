@@ -79,13 +79,13 @@
                 break;
               }
 
-              find_next = search + find_next;
+              find_next = search + find_next + 1;
 
               log("Find Next:"+find_next+" "+titles.slice(find_next+1));
 
               if(find_next > -1) {
                 if(title == titles[find_next]) {
-                  i += find_next;
+                  i = find_next + 1;
                 } else {
                   console.log(find_next);
                   console.log(titles[find_next]);
