@@ -56,14 +56,14 @@
 
         var start = jQuery.inArray(settings.trailhead,titles);
 
-        if(start == -1) {
+        log("Start: " + start);
+
+        if(start < 0) {
           start = 0;
         }
 
 				for(var i=start; i < titles.length;i++) {
           log("Mile marker: "+i+" "+titles.length);
-          log(titles);
-          
 
 					var title = titles[i];
           if(title.length != 0) {
@@ -74,17 +74,21 @@
 
             do {
               var search = jQuery.inArray(title,titles.slice(find_next+1));
-
+              log(["Search: ",search,find_next,title,titles.slice(find_next+1),(search%2)]);
+              
               if(search < 0 || (search % 2 == 0)) {
+                log("Breaking due to failed search");
                 break;
               }
 
               find_next = search + find_next + 1;
 
+              log(["Find Next",find_next,titles[find_next]]);
 
               if(find_next > -1) {
                 if(title == titles[find_next]) {
                   i = find_next + 1;
+                  log("Found! Cutting out loop.");
                 }
               }
             } while(find_next > -1);
