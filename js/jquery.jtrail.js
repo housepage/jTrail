@@ -75,7 +75,7 @@
             do {
               var search = jQuery.inArray(title,titles.slice(find_next+1));
 
-              if(search < 0) {
+              if(search < 0 || (search % 2 == 0)) {
                 break;
               }
 
